@@ -133,8 +133,6 @@ body {
 	}
 }
 
-
-
 @media (prefers-color-scheme: light) {
     #dark-mode-favicon {
         display: block;
