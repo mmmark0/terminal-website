@@ -5,7 +5,7 @@ An interactive and nostalgic experience with this terminal-style presentation we
 
 ## Original Project
 
-This project is based on [Terminal Style Portfolio](https://codepen.io/HuntingHawk/pen/rNaEZxW), which is made by [Jacob Lockett](https://github.com/jacoblockett).
+This project is based on <a href="https://codepen.io/HuntingHawk/pen/rNaEZxW" target="_blank">Terminal Style Portfolio</a>, which is made by <a href="https://github.com/jacoblockett" target="_blank">Jacob Lockett</a>.
 
 ## Extras Added
 
@@ -19,4 +19,4 @@ In this forked version of the project, I have made some changes and added the fo
 
 ## License
 
-This project is licensed under the [Original Project License](https://codepen.io/HuntingHawk/pen/rNaEZxW) because it's a derivative work. Please review the original project's license for more details.
+This project is licensed under the <a href="https://codepen.io/HuntingHawk/pen/rNaEZxW" target="_blank">Original Project License</a> because it's a derivative work. Please review the original project's license for more details.
