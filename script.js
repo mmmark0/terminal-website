@@ -391,13 +391,13 @@ class Field extends React.Component {
           'Bachelor in Business Informatics..........................Higher Specialized School of Business Informatics, Bellinzona',
           '',
           'Work:',
-          'GoodCode SA',
+          'GoodCode SA, Mendrisio',
           'Full Stack Developer',
           'December 2022 - Present',
           '',
-          'Red Cross Ticino',
+          'Swiss Red Cross, Lugano',
           'Full Stack Developer',
-          'August 2021 - March 2022'],
+          'August 2021 - April 2022'],
           hasBuffer: true }] }));
 
     } else if (cmd === 'skills') {
