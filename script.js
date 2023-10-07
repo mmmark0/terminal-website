@@ -96,6 +96,9 @@ class Field extends React.Component {
       command: 'time',
       purpose: 'Displays the current time.' },
     {
+      command: 'motivation',
+      purpose: 'Displays a randomly selected motivational phrase for developers.' },
+    {
       command: 'about',
       isMain: true,
       purpose: 'Displays basic information about Marko.' },
@@ -334,6 +337,23 @@ class Field extends React.Component {
     } else if (cmd === 'date') {
       return this.setState(state => ({
         fieldHistory: [...state.fieldHistory, { text: `The current date is: ${new Date(Date.now()).toLocaleDateString()}`, hasBuffer: true }] }));
+
+    } else if (cmd === 'motivation') {
+
+      fetch('assets/motivational.json')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.motivational_sentences.length);
+          // Once you have the JSON data, you can get a random phrase
+          const randomIndex = Math.floor(Math.random() * data.motivational_sentences.length);
+          const randomPhrase = data.motivational_sentences[randomIndex];
+          return this.setState(state => ({
+            fieldHistory: [...state.fieldHistory, { text: randomPhrase, hasBuffer: true }]
+          }));
+          })
+        .catch(error => {
+          console.error('Error loading JSON:', error);
+        });
 
     } else if (cmd === 'cmd') {
       return this.setState(state => ({
