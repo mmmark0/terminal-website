@@ -80,7 +80,7 @@ class Field extends React.Component {
       purpose: 'Displays Marko\'s curriculum vitae.' },
     {
       command: 'source',
-      purpose: 'Take a look at the source code of the website.' },
+      purpose: 'Retrieve the website\'s source code from Marko\'s GitHub repository.' },
     {
       command: 'theme',
       purpose: 'Sets the color scheme of the Terminal.',
@@ -375,11 +375,7 @@ class Field extends React.Component {
             `--------##############################################+-----`,
             `------+##################################################---`,
             `-----+####################################################+-`,
-            `-----#######################################################`,
-            `----+#######################################################`,
-            `----########################################################`,
-            `----########################################################`,
-            `---+########################################################`,], hasBuffer: true }] }));
+            `-----#######################################################`,], hasBuffer: true }] }));
 
     } else if (cmd === 'motivation') {
 
