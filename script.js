@@ -1,10 +1,10 @@
 const App = () => {
   const [theme, setTheme] = React.useState('dark');
   const themeVars = theme === 'dark' ? {
-    app: { backgroundColor: '#333444' },
+    app: { backgroundColor: '#36393D' },
     terminal: { boxShadow: '0 2px 5px #111' },
-    window: { backgroundColor: '#222345', color: '#F4F4F4' },
-    field: { backgroundColor: '#222333', color: '#F4F4F4', fontWeight: 'normal' },
+    window: { backgroundColor: '#373838', color: '#F4F4F4' }, //373838 26292C F4F4F4
+    field: { backgroundColor: '#000', color: '#F4F4F4', fontWeight: 'normal' },
     cursor: { animation: '1.02s blink-dark step-end infinite' } } :
   {
     app: { backgroundColor: '#ACA9BB' },
@@ -120,8 +120,8 @@ class Field extends React.Component {
       '',
       'INPUT....................The title you want to use for the Terminal window.'] },
 
-    ...['google', 'duckduckgo', 'bing'].map(cmd => {
-      const properCase = cmd === 'google' ? 'Google' : cmd === 'duckduckgo' ? 'DuckDuckGo' : 'Bing';
+    ...['google', 'duckduckgo'].map(cmd => {
+      const properCase = cmd === 'google' ? 'Google' : 'DuckDuckGo';
 
       return {
         command: cmd,
@@ -323,7 +323,7 @@ class Field extends React.Component {
 
     } else if (cmd === 'cv') {
       return this.setState(state => ({
-        fieldHistory: [...state.fieldHistory, { text: `Downloading Marko\'s curriculum vitae...`, hasBuffer: true }] }),
+        fieldHistory: [...state.fieldHistory, { text: `Opening Marko\'s curriculum vitae...`, hasBuffer: true }] }),
       () => window.open('https://markomilicic.com/assets/CV_Marko_Milicic.pdf'));
 
     } else if (cmd === 'source') {
@@ -372,7 +372,7 @@ class Field extends React.Component {
         fieldHistory: [...state.fieldHistory, { text: [
           ``,
           'hey there!',
-          `I'm name is Marko, a passionate full stack developer based in Lugano, Switzerland. I excel in Python, Java, C#, and Solidity, and have experience with frameworks like Django, Spring Boot, and Vaadin. I'm also skilled in test automation and web scraping using Selenium.`,
+          `I'm name is Marko, a passionate full stack developer based in Lugano, Switzerland. I'm skilled in Python, Java, C#, and Solidity, and have experience with frameworks like Django, Spring Boot, and Vaadin. I'm also skilled in test automation and web scraping using Selenium.`,
           ``,
           `I'm well-versed in AWS for deploying and scaling applications and have a keen interest in blockchain technology. Currently, I'm expanding my skills with Rust.`,
           ``,
@@ -441,15 +441,7 @@ class Field extends React.Component {
           hasBuffer: true }] }),
 
       () => this.props.setTitle(params.length > 0 ? params.join(' ') : ''));
-    } else if (['google', 'duckduckgo', 'bing'].some(s => s === cmd)) {
-      if (cmd === "bing") {
-        return this.setState(state => ({
-          fieldHistory: [...state.fieldHistory, {
-            text: "Sorry, Google is a POS.",
-            hasBuffer: true }] }));
-
-
-      }
+    } else if (['google', 'duckduckgo'].some(s => s === cmd)) {
       return this.setState(state => ({
         fieldHistory: [...state.fieldHistory, {
           text: params.length ? `Searching ${cmd.toUpperCase()} for ${params.join(' ')}...` : `Launching ${cmd.toUpperCase()}...`,
