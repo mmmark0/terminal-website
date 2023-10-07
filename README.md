@@ -1,1 +1,22 @@
-# terminal-website
+# Terminal Website
+
+An interactive and nostalgic experience with this terminal-style presentation website! This project brings a classic command-line interface to the web, allowing users to input commands like 'help', 'about', 'skills', 'experience' and more to access information about me. It's a unique and fun way to showcase your portfolio, provide information about yourself, and engage with visitors in a retro-inspired way.
+
+
+## Original Project
+
+This project is based on [Terminal Style Portfolio](https://codepen.io/HuntingHawk/pen/rNaEZxW), which is made by [Jacob Lockett](https://github.com/jacoblockett).
+
+## Extras Added
+
+In this forked version of the project, I have made some changes and added the following extra commands:
+
+- `CV`: Displays my curriculum vitae.
+- `PHOTO`: Displays my photo in ASCII Art.
+- `MOTIVATION`: Displays a randomly selected motivational phrase for developers.
+- `SOURCE`: Retrieve the website's source code from Marko's GitHub repository.
+- ...
+
+## License
+
+This project is licensed under the [Original Project License](https://codepen.io/HuntingHawk/pen/rNaEZxW) because it's a derivative work. Please review the original project's license for more details.
