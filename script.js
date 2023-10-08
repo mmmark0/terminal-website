@@ -330,9 +330,9 @@ class Field extends React.Component {
 
     } else if (cmd === 'cv') {
       return this.setState(state => ({
-      fieldHistory: [...state.fieldHistory, { text: `Apologies! The curriculum vitae is currently unavailable. Please try again later.`, hasBuffer: true }] }));
-      //   fieldHistory: [...state.fieldHistory, { text: `Opening Marko\'s curriculum vitae...`, hasBuffer: true }] }),
-      // () => window.open('#'));
+      // fieldHistory: [...state.fieldHistory, { text: `Apologies! The curriculum vitae is currently unavailable. Please try again later.`, hasBuffer: true }] }));
+        fieldHistory: [...state.fieldHistory, { text: `Opening Marko\'s curriculum vitae...`, hasBuffer: true }] }),
+      () => window.open('https://markomilicic.com/assets/Marko Milicic CV.pdf'));
 
     } else if (cmd === 'source') {
       return this.setState(state => ({
